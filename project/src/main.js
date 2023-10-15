@@ -31,14 +31,17 @@ const router = createRouter({
         path: `/profile`,
         name: `ProfilePage`,
         component: ProfilePage,
+        meta: {
+            requiresAuth: true,
+        }
     }],
     history: createWebHistory(),
 })
 
-const isAuth = true
+
 
 router.beforeEach((to) => {
-    if(to.meta.requiresAuth && !isAuth){
+    if(to.meta.requiresAuth && !localStorage.getItem(`isAuth`)){
         return{
             name: `AuthPage`
         }
