@@ -4,6 +4,7 @@
         <div v-if="isLoad">Загрузка данных...</div>
         <div v-else>
             <div>
+                <button @click="this.ChangeCat()">Поменять котика</button>
                 <img v-bind:src="imageUrl"  alt="cat">
             </div>
         </div>
@@ -19,20 +20,22 @@
                 isLoad: true,
             }
         },
-        mounted(){
-            const URL = ' https://api.thecatapi.com/v1/images/search';
-            const options = {
-                method: 'GET',
+        methods:{
+            ChangeCat(){
+                const URL = ' https://api.thecatapi.com/v1/images/search';
+                const options = {
+                    method: 'GET',
                 };
                 fetch(URL, options)
                 .then((res)=> res.json())
                 .then((res) => {
                     this.imageUrl = res[0].url
-                    console.log(this.imageUrl)
-                    console.log(res)
-
                     this.isLoad = false
                 })
+            }
+        },
+        mounted(){
+            this.ChangeCat()
             }
     }
 </script>
