@@ -1,11 +1,9 @@
 <template>
-    <div>
-        <nav>
-            <router-link to="/">Главная</router-link>
-            <router-link to="/im">Чат</router-link>
-            <router-link to="/api">Котики</router-link>
-            <router-link to="/profile">Профиль</router-link>
-        </nav>
+    <div class="nav">
+        <button @click="$router.push(`/`)">Главная</button>
+        <button @click="$router.push(`/im`)">Чатик</button>
+        <button @click="$router.push(`/api`)">Котики</button>
+        <button @click="$router.push(`/profile`)">Профиль</button>
     </div>
 </template>
 
@@ -14,3 +12,12 @@
         name: `Navigation`
     }
 </script>
+<style>
+    .nav{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 3%;
+        
+    }
+</style>
