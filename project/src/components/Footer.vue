@@ -1,5 +1,5 @@
 <template>
-    <footer class="footer">footer</footer>
+    <footer class="footer">Здесь живут только мыши!</footer>
 </template>
 
 <script>
@@ -10,6 +10,6 @@
 </script>
 <style>
     .footer{
-        margin-top: 286%
+        margin-top: 100vh
     }
 </style>

@@ -16,8 +16,14 @@
     .nav{
         display: flex;
         justify-content: space-around;
-        align-items: center;
-        margin-top: 3%;
         
+    }
+    .nav button{
+        background: #1C1C1C;
+        color: #dbd7d2;
+        border: 3px solid black
+    }
+    .nav button:hover{
+        background: black;
     }
 </style>

@@ -40,7 +40,7 @@
                     this.newMessage = ``
                 }
                 else{
-                    alert(`введите сообщение!`)
+                    alert(`Введите сообщение!`)
                 }
             },
             saveChatRecords(){
@@ -70,3 +70,25 @@
         }
     }
 </script>
+
+<style>
+    .chat{
+        color: #dbd7d2;
+    }
+    .chat input {
+        margin-top: 3vh;
+        background: #1C1C1C;
+        color: #dbd7d2;
+        border: black solid 3px;
+    }
+    .chat button{
+        background: #1C1C1C;
+        color: #dbd7d2;
+        border: 3px solid black;
+        margin-left: 1%;
+        
+    }
+    .chat button:hover{
+        background: black;
+    }
+</style>

@@ -39,9 +39,25 @@
                     })
                 }
                 else{
-                    console.log(`хня какая то`)
+                    alert(`Введите логин и пароль!`)
                 }
             }
         }
     }
 </script>
+
+<style>
+    input{
+        margin-top: 1vh;
+        background: #1C1C1C;
+        color: #dbd7d2;
+        border: black solid 3px;
+        margin-left: 1vh;
+    }
+    label{
+        margin-left: 1vh;
+    }
+    button{
+        margin-left: 1vh;
+    }
+</style>

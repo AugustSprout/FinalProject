@@ -1,12 +1,18 @@
 <template>
-    <h1>profile</h1>
-    <button @click="logout">выйти из аккаунта</button>
+    <h1>Профиль</h1>
+    <h2>Логин: {{ userName }} </h2>
+    <button @click="logout">Выйти из аккаунта</button>
 
 </template>
 
 <script>
     export default {
         name: `ProfilePage`,
+        data(){
+            return{
+                userName: localStorage.getItem(`userName`),
+            }
+        },
         methods:{
             logout(){
                 localStorage.removeItem(`isAuth`, false)

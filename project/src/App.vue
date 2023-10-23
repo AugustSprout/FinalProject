@@ -23,7 +23,8 @@ export default {
 #app {
   background-color: #1C1C1C;
   color: #dbd7d2;
-  display: flex;
+  display: block;
+  padding-top: 1%;
   justify-content: center;
   text-align: center;
   

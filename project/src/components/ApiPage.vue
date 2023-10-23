@@ -1,11 +1,11 @@
 <template>
-    <div>
+    <div class="api">
         <h1>Котики</h1>
         <div v-if="isLoad">Загрузка данных...</div>
         <div v-else>
             <div>
                 <button @click="this.ChangeCat()">Поменять котика</button>
-                <img v-bind:src="imageUrl"  alt="cat">
+                <img class="img" v-bind:src="imageUrl"  alt="cat">
             </div>
         </div>
     </div>
@@ -39,3 +39,27 @@
             }
     }
 </script>
+<style>
+    .api{
+        display: grid;
+        flex-direction: column;
+        justify-content: center
+    }
+    button{
+        background: #1C1C1C;
+        color: #dbd7d2;
+        border: 3px solid black;
+    }
+    button:hover{
+        background: black;
+    }
+    .img{
+        display: block;
+        margin-left: 10%;
+        margin-top: 5vh;
+        max-width: 80%;
+        max-height: 80vh;
+        min-width: 40%;
+        min-height: 40vh;
+    }
+</style>
